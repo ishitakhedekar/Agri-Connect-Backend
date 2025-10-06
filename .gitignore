@@ -1,0 +1,16 @@
+# Dependencies
+/node_modules
+
+# Environment variables - VERY IMPORTANT
+.env
+.env.local
+.env.development
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build output
+/dist
+/build
