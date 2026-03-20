@@ -7,14 +7,16 @@ const userSchema = new mongoose.Schema({
   role: {
     type: String,
     enum: ["landowner", "farmer"],
-    required: true},
+    required: true
+  },
   phonenumber: {
-    type: Number,
+    type: String,
     required: true,
     unique: true,
-    sparse: true // Add this to allow multiple documents to have no phone number
+    sparse: true
   },
-  address: { type: String, required: true }
+  address: { type: String, required: true },
+  bio: { type: String, default: "" }
 });
 
 module.exports = mongoose.model("User", userSchema);
